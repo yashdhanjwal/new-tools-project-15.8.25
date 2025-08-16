@@ -1,90 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A free suite of online tools by Yash Dhanjwal, including file converters, text tools, and more.">
-    <meta name="author" content="Yash Dhanjwal">
-    <title>Free Tools by Yash - Fast & Simple Online Utilities</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Yash Dhanjwal — Portfolio | B.Tech Student & Online Tools Developer</title>
+    <meta name="description" content="Official portfolio of Yash Dhanjwal, a B.Tech student from Delhi creating free online multi-tools and open web projects.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>YD</text></svg>">
 </head>
 <body>
+
     <header>
         <div class="container">
-            <a href="/" class="logo">Free Tools by Yash</a>
+            <div class="logo">YD</div>
             <nav>
-                <button id="theme-toggle">Toggle Dark Mode</button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-button" aria-label="Open navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <section class="hero">
-                <h2>The Best Free Online Tools</h2>
-                <p>Convert files, count words, and more with our fast and easy-to-use tools.</p>
-            </section>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Hi, I’m Yash Dhanjwal.</h1>
+                <p class="subheadline">B.Tech student from Delhi building free and open online multi-tools.</p>
+                <div class="cta-buttons">
+                    <a href="#tools" class="cta-primary">Explore My Tools</a>
+                    <a href="#contact" class="cta-secondary">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:info@yashdhanjwal.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                    <a href="https://www.yashdhanjwal.com" target="_blank" rel="noopener noreferrer" aria-label="Website"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a>
+                    <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
+        </section>
 
-            <section class="tools-grid">
-                <a href="word-count.html" class="tool-card">
-                    <h3>Word Count</h3>
-                    <p>Count words, characters, and sentences in your text.</p>
-                </a>
-                <a href="image-converter.html" class="tool-card">
-                    <h3>Image Converter</h3>
-                    <p>Convert images between JPG, PNG, and WEBP.</p>
-                </a>
-                <a href="pdf-to-jpg.html" class="tool-card">
-                    <h3>PDF to JPG</h3>
-                    <p>Convert each page of a PDF into a JPG image.</p>
-                </a>
-                <a href="jpg-to-pdf.html" class="tool-card">
-                    <h3>JPG to PDF</h3>
-                    <p>Combine JPG images into a single PDF file.</p>
-                </a>
-                <a href="rotate-pdf.html" class="tool-card">
-                    <h3>Rotate PDF</h3>
-                    <p>Rotate all pages in a PDF document.</p>
-                </a>
-                <a href="image-compressor.html" class="tool-card">
-                    <h3>Image Compressor</h3>
-                    <p>Reduce the file size of your JPG & PNG images.</p>
-                </a>
-                <a href="image-resizer.html" class="tool-card">
-                    <h3>Image Resizer</h3>
-                    <p>Easily resize your images to the perfect dimensions.</p>
-                </a>
-                <a href="unit-converter.html" class="tool-card">
-                    <h3>Unit Converter</h3>
-                    <p>Convert length, weight, temperature, and more.</p>
-                </a>
-                <a href="case-converter.html" class="tool-card">
-                    <h3>Text Case Converter</h3>
-                    <p>Convert text between different letter cases.</p>
-                </a>
-                <a href="readability-checker.html" class="tool-card">
-                    <h3>Readability Checker</h3>
-                    <p>Check the readability score of your text.</p>
-                </a>
-                <a href="seo-checker.html" class="tool-card">
-                    <h3>SEO Checker</h3>
-                    <p>Check title and meta description length.</p>
-                </a>
-                <a href="emi-calculator.html" class="tool-card">
-                    <h3>EMI Calculator</h3>
-                    <p>Calculate your Equated Monthly Installment.</p>
-                </a>
-            </section>
-        </div>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I’m Yash Dhanjwal, a B.Tech student from Delhi building useful online multi-tools and sharing my projects freely for everyone.</p>
+                <ul class="highlights">
+                    <li>B.Tech student based in Delhi, India.</li>
+                    <li>Building practical, user-friendly web tools.</li>
+                    <li>Projects and tools are freely available online.</li>
+                </ul>
+                <div class="skills">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">APIs</span>
+                    <span class="skill-tag">UI/UX</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects Showcase</h2>
+                <div class="project-grid">
+                    <!-- Placeholder Projects -->
+                    <div class="project-card"><h3>Project One</h3><p>A short description of the first project.</p><div class="tags"><span class="tag">Web App</span></div><a href="#" class="project-link">View Project</a></div>
+                    <div class="project-card"><h3>Project Two</h3><p>A short description of the second project.</p><div class="tags"><span class="tag">Utility</span></div><a href="#" class="project-link">View Project</a></div>
+                    <div class="project-card"><h3>Project Three</h3><p>A short description of the third project.</p><div class="tags"><span class="tag">API</span></div><a href="#" class="project-link">View Project</a></div>
+                    <div class="project-card"><h3>Project Four</h3><p>A short description of the fourth project.</p><div class="tags"><span class="tag">Open Source</span></div><a href="#" class="project-link">View Project</a></div>
+                    <div class="project-card"><h3>Project Five</h3><p>A short description of the fifth project.</p><div class="tags"><span class="tag">Tool</span></div><a href="#" class="project-link">View Project</a></div>
+                    <div class="project-card"><h3>Project Six</h3><p>A short description of the sixth project.</p><div class="tags"><span class="tag">Experiment</span></div><a href="#" class="project-link">View Project</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="container">
+                <h2>Tools Hub</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>tools.yashdhanjwal.com</h3>
+                        <p>A growing suite of free, browser-based utilities.</p>
+                        <a href="https://tools.yashdhanjwal.com" target="_blank" rel="noopener noreferrer" class="tool-link">Visit Tools</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>tools1.yashdhanjwal.com</h3>
+                        <p>Experimental tools and early previews.</p>
+                        <a href="https://tools1.yashdhanjwal.com" target="_blank" rel="noopener noreferrer" class="tool-link">Visit Experimental Tools</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-details">
+                    <p><a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a></p>
+                    <p><a href="tel:+919990033043">+91 9990033043</a></p>
+                    <p><a href="https://www.yashdhanjwal.com" target="_blank" rel="noopener noreferrer">www.yashdhanjwal.com</a></p>
+                </div>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p class="reply-note">I usually reply within 24–48 hours.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
-            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+            <div class="footer-main">
+                <div class="footer-info">
+                    <p>&copy; <span id="current-year"></span> Yash Dhanjwal. All rights reserved.</p>
+                    <p>Delhi, India</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                <div class="footer-socials">
+                     <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                     <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
