@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compress JPG and PNG images online to reduce their file size. Adjust the quality to find the perfect balance.">
+    <title>Image Compressor - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        #file-input {
+            display: none;
+        }
+        .options {
+            margin-top: 1.5rem;
+            display: none;
+        }
+        .quality-slider {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .size-info {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        #preview {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        #download-btn {
+            display: none;
+            background: #28a745;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Image Compressor</h2>
+                <p>Reduce the file size of your JPG & PNG images.</p>
+
+                <label for="file-input" class="upload-area" id="upload-label">
+                    <p>Click to select an image</p>
+                </label>
+                <input type="file" id="file-input" accept="image/jpeg,image/png">
+
+                <img id="preview" style="display:none;">
+
+                <div class="options" id="options-area">
+                    <div class="quality-slider">
+                        <label for="quality">Compression Level: <span id="quality-value">0.8</span></label>
+                        <input type="range" id="quality" min="0.1" max="1" step="0.05" value="0.8" style="width: 100%;">
+                    </div>
+                    <div class="size-info">
+                        <p>Original Size: <span id="original-size">-</span> KB</p>
+                        <p>Compressed Size: <span id="compressed-size">-</span> KB</p>
+                    </div>
+                </div>
+
+                <a id="download-btn">Download Compressed Image</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/image-compressor.js"></script>
+</body>
+</html>

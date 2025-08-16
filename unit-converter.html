@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A free and easy-to-use unit converter for length, weight, temperature, and more.">
+    <title>Unit Converter - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        .converter-group {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--card-border);
+            border-radius: 5px;
+        }
+        .converter-group h3 {
+            margin-top: 0;
+        }
+        .converter-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .converter-row input, .converter-row select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Unit Converter</h2>
+
+                <!-- Length Converter -->
+                <div class="converter-group">
+                    <h3>Length</h3>
+                    <div class="converter-row">
+                        <input type="number" id="length-input" placeholder="Enter value">
+                        <select id="length-from">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="feet">Feet</option>
+                            <option value="miles">Miles</option>
+                        </select>
+                        <span>to</span>
+                        <select id="length-to">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="feet">Feet</option>
+                            <option value="miles">Miles</option>
+                        </select>
+                        <input type="text" id="length-output" readonly placeholder="Result">
+                    </div>
+                </div>
+
+                <!-- Weight Converter -->
+                <div class="converter-group">
+                    <h3>Weight</h3>
+                    <div class="converter-row">
+                        <input type="number" id="weight-input" placeholder="Enter value">
+                        <select id="weight-from">
+                            <option value="grams">Grams</option>
+                            <option value="kilograms">Kilograms</option>
+                            <option value="pounds">Pounds</option>
+                            <option value="ounces">Ounces</option>
+                        </select>
+                        <span>to</span>
+                        <select id="weight-to">
+                            <option value="grams">Grams</option>
+                            <option value="kilograms">Kilograms</option>
+                            <option value="pounds">Pounds</option>
+                            <option value="ounces">Ounces</option>
+                        </select>
+                        <input type="text" id="weight-output" readonly placeholder="Result">
+                    </div>
+                </div>
+
+                <!-- Temperature Converter -->
+                <div class="converter-group">
+                    <h3>Temperature</h3>
+                    <div class="converter-row">
+                        <input type="number" id="temp-input" placeholder="Enter value">
+                        <select id="temp-from">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <span>to</span>
+                        <select id="temp-to">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <input type="text" id="temp-output" readonly placeholder="Result">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/unit-converter.js"></script>
+</body>
+</html>

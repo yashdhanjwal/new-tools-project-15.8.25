@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check the length of your SEO titles and meta descriptions to ensure they are optimized for search engines.">
+    <title>SEO Title & Meta Description Checker - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        .checker-group {
+            margin-top: 2rem;
+        }
+        .checker-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .checker-group input, .checker-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .checker-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .count {
+            text-align: right;
+            margin-top: 0.25rem;
+            font-size: 0.9rem;
+        }
+        .recommendation {
+            font-weight: bold;
+        }
+        .good { color: #28a745; }
+        .bad { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>SEO Title & Meta Description Checker</h2>
+                <p>Enter your title and meta description to check their length.</p>
+
+                <div class="checker-group">
+                    <label for="title-input">Title</label>
+                    <input type="text" id="title-input" placeholder="Enter your title here">
+                    <p class="count">Character Count: <span id="title-count">0</span> / 60 <span id="title-rec" class="recommendation"></span></p>
+                </div>
+
+                <div class="checker-group">
+                    <label for="meta-input">Meta Description</label>
+                    <textarea id="meta-input" placeholder="Enter your meta description here"></textarea>
+                    <p class="count">Character Count: <span id="meta-count">0</span> / 160 <span id="meta-rec" class="recommendation"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/seo-checker.js"></script>
+</body>
+</html>

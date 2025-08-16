@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rotate all pages of a PDF document by 90, 180, or 270 degrees. Free and secure online PDF rotator.">
+    <title>Rotate PDF - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        #file-input {
+            display: none;
+        }
+        .options {
+            margin-top: 1.5rem;
+            display: none;
+        }
+        .rotation-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem auto;
+        }
+        #rotate-btn, #download-btn {
+            display: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+        #rotate-btn {
+            background: var(--primary-color);
+        }
+        #download-btn {
+            background: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Rotate PDF</h2>
+                <p>Select a PDF file and choose how you want to rotate it.</p>
+
+                <label for="file-input" class="upload-area" id="upload-label">
+                    <p>Click to select a PDF file</p>
+                </label>
+                <input type="file" id="file-input" accept="application/pdf">
+
+                <div class="options" id="options-area">
+                    <p>File selected: <strong id="filename"></strong></p>
+                    <div class="rotation-options">
+                        <label>
+                            <input type="radio" name="rotation" value="90" checked> 90°
+                        </label>
+                        <label>
+                            <input type="radio" name="rotation" value="180"> 180°
+                        </label>
+                        <label>
+                            <input type="radio" name="rotation" value="270"> 270°
+                        </label>
+                    </div>
+                    <button id="rotate-btn">Rotate PDF</button>
+                    <a id="download-btn">Download Rotated PDF</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/rotate-pdf.js"></script>
+</body>
+</html>

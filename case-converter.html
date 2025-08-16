@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert text between different letter cases: uppercase, lowercase, title case, sentence case, and more.">
+    <title>Text Case Converter - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        textarea {
+            width: 100%;
+            height: 250px;
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            resize: vertical;
+            margin-top: 1rem;
+        }
+        .buttons-container {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .buttons-container button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Text Case Converter</h2>
+                <p>Paste your text below and choose a case to convert it to.</p>
+                <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+                <div class="buttons-container">
+                    <button id="upper-btn">UPPER CASE</button>
+                    <button id="lower-btn">lower case</button>
+                    <button id="title-btn">Title Case</button>
+                    <button id="sentence-btn">Sentence case</button>
+                    <button id="copy-btn">Copy to Clipboard</button>
+                    <button id="clear-btn">Clear Text</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/case-converter.js"></script>
+</body>
+</html>

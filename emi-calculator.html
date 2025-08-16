@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your Equated Monthly Installment (EMI) for a loan. Free and easy-to-use EMI calculator.">
+    <title>EMI Calculator - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+        }
+        .result-display {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--background-color);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .result-display h3 {
+            margin: 0;
+            color: var(--primary-color);
+        }
+        .result-display p {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0.5rem 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>EMI Calculator</h2>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="loan-amount">Loan Amount (₹)</label>
+                        <input type="number" id="loan-amount" placeholder="e.g., 1000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Annual Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" placeholder="e.g., 8.5">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-tenure">Loan Tenure (Years)</label>
+                        <input type="number" id="loan-tenure" placeholder="e.g., 20">
+                    </div>
+                </div>
+                <div class="result-display">
+                    <h3>Your Monthly EMI</h3>
+                    <p>₹ <span id="emi-result">0.00</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/emi-calculator.js"></script>
+</body>
+</html>

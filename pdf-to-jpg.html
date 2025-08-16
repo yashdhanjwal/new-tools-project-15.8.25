@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert each page of a PDF document into high-quality JPG images online. Free, fast, and secure client-side conversion.">
+    <title>PDF to JPG Converter - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        #file-input {
+            display: none;
+        }
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        #results-container {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .result-item {
+            border: 1px solid var(--card-border);
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .result-item img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .result-item a {
+            display: block;
+            margin-top: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>PDF to JPG Converter</h2>
+                <p>Select a PDF file to convert its pages into JPG images.</p>
+
+                <label for="file-input" class="upload-area" id="upload-label">
+                    <p>Click to select a PDF file</p>
+                </label>
+                <input type="file" id="file-input" accept="application/pdf">
+
+                <div class="status" id="status-text" style="margin-top: 1rem; font-size: 1rem;"></div>
+                <button id="convert-btn" style="display: none; background: var(--primary-color); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; font-size: 1.1rem; margin-top: 1rem;">Convert to JPG</button>
+                <div id="results-container" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.min.js';
+    </script>
+    <script src="js/script.js"></script> <!-- For theme toggle -->
+    <script src="js/pdf-to-jpg.js"></script>
+</body>
+</html>

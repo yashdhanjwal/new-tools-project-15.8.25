@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert images online between different formats like JPG, PNG, and WEBP for free.">
+    <title>Image Converter - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        #file-input {
+            display: none;
+        }
+        .options {
+            margin-top: 1.5rem;
+            display: none;
+        }
+        #preview {
+            max-width: 100%;
+            max-height: 300px;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        #convert-btn, #download-btn {
+            display: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+        #convert-btn {
+            background: var(--primary-color);
+        }
+        #download-btn {
+            background: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Image Converter</h2>
+                <p>Convert your images to JPG, PNG, or WEBP.</p>
+
+                <label for="file-input" class="upload-area" id="upload-label">
+                    <p>Click to select an image</p>
+                </label>
+                <input type="file" id="file-input" accept="image/*">
+
+                <img id="preview" style="display:none;">
+
+                <div class="options" id="options-area">
+                    <p>Convert to:</p>
+                    <select id="format-select">
+                        <option value="jpeg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                    <button id="convert-btn">Convert</button>
+                    <a id="download-btn">Download Image</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/image-converter.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and fast online tool to count words, characters, sentences, and paragraphs in your text.">
+    <title>Word Count Tool - Free Tools by Yash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 250px;
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            resize: vertical;
+        }
+
+        .results {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .result-box {
+            background: var(--background-color);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .result-box h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .result-box p {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Tools by Yash</a>
+            <nav>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Word Count Tool</h2>
+                <textarea id="text-input" placeholder="Start typing or paste your text here..."></textarea>
+                <div class="results">
+                    <div class="result-box">
+                        <h4>Words</h4>
+                        <p id="word-count">0</p>
+                    </div>
+                    <div class="result-box">
+                        <h4>Characters</h4>
+                        <p id="char-count">0</p>
+                    </div>
+                    <div class="result-box">
+                        <h4>Sentences</h4>
+                        <p id="sentence-count">0</p>
+                    </div>
+                    <div class="result-box">
+                        <h4>Paragraphs</h4>
+                        <p id="paragraph-count">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a>. All rights reserved.</p>
+             <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- For theme toggle -->
+    <script src="js/word-count.js"></script>
+</body>
+</html>
