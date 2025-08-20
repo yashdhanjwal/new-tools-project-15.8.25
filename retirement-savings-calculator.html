@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your Equated Monthly Installment (EMI) for any loan. Free, fast, and easy-to-use EMI calculator.">
-    <title>EMI Calculator - Free Online Tools by Yash Dhanjwal</title>
+    <meta name="description" content="Project your retirement savings and see how your investments can grow over time. Plan for your future with this easy-to-use retirement calculator.">
+    <title>Retirement Savings Calculator - Free Online Tools by Yash Dhanjwal</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .tool-container {
@@ -26,9 +26,6 @@
             flex-direction: column;
             text-align: left;
         }
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
         .form-group label {
             margin-bottom: 0.5rem;
             font-weight: bold;
@@ -40,26 +37,27 @@
             border: 1px solid var(--card-border);
         }
         .results-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
             margin-top: 2rem;
-            text-align: center;
-        }
-        .result-box {
             padding: 1.5rem;
             background-color: var(--background-color);
             border-radius: 5px;
+            text-align: center;
         }
-        .result-box h3 {
+        .results-summary h3 {
             margin: 0;
-            font-size: 1rem;
             color: var(--primary-color);
         }
-        .result-box p {
-            font-size: 1.75rem;
+        .results-summary p {
+            font-size: 2.5rem;
             font-weight: bold;
             margin: 0.5rem 0 0 0;
+        }
+        .result-breakdown {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -77,34 +75,42 @@
     <main>
         <div class="container">
             <div class="tool-container">
-                <h2>EMI Calculator</h2>
+                <h2>Retirement Savings Calculator</h2>
                 <div class="calculator-form">
-                    <div class="form-group full-width">
-                        <label for="loan-amount">Loan Amount (₹)</label>
-                        <input type="number" id="loan-amount" placeholder="e.g., 1000000">
+                    <div class="form-group">
+                        <label for="current-age">Current Age</label>
+                        <input type="number" id="current-age" placeholder="e.g., 30">
                     </div>
                     <div class="form-group">
-                        <label for="interest-rate">Annual Interest Rate (%)</label>
-                        <input type="number" id="interest-rate" placeholder="e.g., 8.5">
+                        <label for="retirement-age">Retirement Age</label>
+                        <input type="number" id="retirement-age" placeholder="e.g., 65">
                     </div>
                     <div class="form-group">
-                        <label for="loan-tenure">Loan Tenure (Years)</label>
-                        <input type="number" id="loan-tenure" placeholder="e.g., 20">
+                        <label for="current-savings">Current Savings (₹)</label>
+                        <input type="number" id="current-savings" placeholder="e.g., 500000">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthly-contribution">Monthly Contribution (₹)</label>
+                        <input type="number" id="monthly-contribution" placeholder="e.g., 10000">
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="interest-rate">Expected Annual Rate of Return (%)</label>
+                        <input type="number" id="interest-rate" placeholder="e.g., 7">
                     </div>
                 </div>
 
                 <div class="results-summary">
-                    <div class="result-box">
-                        <h3>Monthly EMI</h3>
-                        <p>₹ <span id="monthly-payment">0.00</span></p>
-                    </div>
-                    <div class="result-box">
-                        <h3>Total Interest</h3>
-                        <p>₹ <span id="total-interest">0.00</span></p>
-                    </div>
-                    <div class="result-box">
-                        <h3>Total Cost</h3>
-                        <p>₹ <span id="total-cost">0.00</span></p>
+                    <h3>You could have at retirement</h3>
+                    <p>₹ <span id="total-savings">0.00</span></p>
+                    <div class="result-breakdown">
+                        <div>
+                            <h4>Total Contributions</h4>
+                            <p style="font-size: 1.5rem;">₹ <span id="total-contributions">0.00</span></p>
+                        </div>
+                        <div>
+                            <h4>Total Interest Earned</h4>
+                            <p style="font-size: 1.5rem;">₹ <span id="total-interest">0.00</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,6 +125,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/emi-calculator.js"></script>
+    <script src="js/retirement-savings-calculator.js"></script>
 </body>
 </html>

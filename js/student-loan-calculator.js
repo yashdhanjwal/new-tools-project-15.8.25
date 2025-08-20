@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalCostSpan = document.getElementById('total-cost');
 
     function formatCurrency(value) {
-        return value.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        // Using 'en-US' for dollar formatting, can be changed if needed
+        return value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
-    function calculateEMI() {
+    function calculateStudentLoan() {
         const p = parseFloat(loanAmountInput.value);
         const annualRate = parseFloat(interestRateInput.value);
         const tenureYears = parseFloat(loanTenureInput.value);
@@ -53,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     [loanAmountInput, interestRateInput, loanTenureInput].forEach(input => {
-        input.addEventListener('input', calculateEMI);
+        input.addEventListener('input', calculateStudentLoan);
     });
 
     // Initial calculation on page load
-    calculateEMI();
+    calculateStudentLoan();
 });

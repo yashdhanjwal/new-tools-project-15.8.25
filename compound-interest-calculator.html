@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your Equated Monthly Installment (EMI) for any loan. Free, fast, and easy-to-use EMI calculator.">
-    <title>EMI Calculator - Free Online Tools by Yash Dhanjwal</title>
+    <meta name="description" content="Calculate the future value of your investment with the power of compound interest. See how your money can grow over time.">
+    <title>Compound Interest Calculator - Free Online Tools by Yash Dhanjwal</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .tool-container {
@@ -26,18 +26,17 @@
             flex-direction: column;
             text-align: left;
         }
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
         .form-group label {
             margin-bottom: 0.5rem;
             font-weight: bold;
         }
-        .form-group input {
+        .form-group input, .form-group select {
             padding: 0.7rem;
             font-size: 1rem;
             border-radius: 5px;
             border: 1px solid var(--card-border);
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         .results-summary {
             display: grid;
@@ -77,34 +76,43 @@
     <main>
         <div class="container">
             <div class="tool-container">
-                <h2>EMI Calculator</h2>
+                <h2>Compound Interest Calculator</h2>
                 <div class="calculator-form">
-                    <div class="form-group full-width">
-                        <label for="loan-amount">Loan Amount (₹)</label>
-                        <input type="number" id="loan-amount" placeholder="e.g., 1000000">
+                    <div class="form-group">
+                        <label for="principal">Principal Amount (₹)</label>
+                        <input type="number" id="principal" placeholder="e.g., 100000">
                     </div>
                     <div class="form-group">
                         <label for="interest-rate">Annual Interest Rate (%)</label>
-                        <input type="number" id="interest-rate" placeholder="e.g., 8.5">
+                        <input type="number" id="interest-rate" placeholder="e.g., 8">
                     </div>
                     <div class="form-group">
-                        <label for="loan-tenure">Loan Tenure (Years)</label>
-                        <input type="number" id="loan-tenure" placeholder="e.g., 20">
+                        <label for="time-period">Time Period (Years)</label>
+                        <input type="number" id="time-period" placeholder="e.g., 10">
+                    </div>
+                    <div class="form-group">
+                        <label for="compounding-frequency">Compounding Frequency</label>
+                        <select id="compounding-frequency">
+                            <option value="1">Annually</option>
+                            <option value="2">Semi-Annually</option>
+                            <option value="4">Quarterly</option>
+                            <option value="12" selected>Monthly</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="results-summary">
                     <div class="result-box">
-                        <h3>Monthly EMI</h3>
-                        <p>₹ <span id="monthly-payment">0.00</span></p>
+                        <h3>Future Value</h3>
+                        <p>₹ <span id="future-value">0.00</span></p>
                     </div>
                     <div class="result-box">
-                        <h3>Total Interest</h3>
+                        <h3>Principal Invested</h3>
+                        <p>₹ <span id="principal-invested">0.00</span></p>
+                    </div>
+                    <div class="result-box">
+                        <h3>Total Interest Earned</h3>
                         <p>₹ <span id="total-interest">0.00</span></p>
-                    </div>
-                    <div class="result-box">
-                        <h3>Total Cost</h3>
-                        <p>₹ <span id="total-cost">0.00</span></p>
                     </div>
                 </div>
             </div>
@@ -119,6 +127,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/emi-calculator.js"></script>
+    <script src="js/compound-interest-calculator.js"></script>
 </body>
 </html>

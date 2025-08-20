@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your net worth by listing your assets and liabilities. Get a clear picture of your financial health.">
+    <title>Net Worth Calculator - Free Online Tools by Yash Dhanjwal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        .net-worth-summary {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .net-worth-summary h3 {
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+        .net-worth-summary p {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+        }
+        .calculator-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .category-column h3 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+            width: 60%;
+        }
+        .category-total {
+            text-align: right;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .calculator-body {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Online Tools by Yash Dhanjwal</a>
+            <nav>
+                <a href="about.html">About</a>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Net Worth Calculator</h2>
+                <div class="net-worth-summary">
+                    <h3>Your Net Worth</h3>
+                    <p>$<span id="net-worth-result">0.00</span></p>
+                </div>
+                <div class="calculator-body">
+                    <div class="category-column" id="assets">
+                        <h3>Assets</h3>
+                        <div class="form-group">
+                            <label>Cash & Savings</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Investments</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Real Estate</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Retirement Accounts</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicles</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Other Valuables</label>
+                            <input type="number" class="asset-input" placeholder="0">
+                        </div>
+                        <div class="category-total">
+                            Total Assets: $<span id="total-assets">0.00</span>
+                        </div>
+                    </div>
+                    <div class="category-column" id="liabilities">
+                        <h3>Liabilities</h3>
+                        <div class="form-group">
+                            <label>Mortgage</label>
+                            <input type="number" class="liability-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Auto Loans</label>
+                            <input type="number" class="liability-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Student Loans</label>
+                            <input type="number" class="liability-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Credit Card Debt</label>
+                            <input type="number" class="liability-input" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Other Loans</label>
+                            <input type="number" class="liability-input" placeholder="0">
+                        </div>
+                        <div class="category-total">
+                            Total Liabilities: $<span id="total-liabilities">0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a> | Powered by Hostingial.com</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/net-worth-calculator.js"></script>
+</body>
+</html>

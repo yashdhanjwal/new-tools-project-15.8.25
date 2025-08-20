@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your Indian income tax liability for the financial year 2024-25 (AY 2025-26). Compare the old and new tax regimes.">
+    <title>Income Tax Calculator (India) - Free Online Tools by Yash Dhanjwal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+        }
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid var(--card-border);
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .results-summary {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--background-color);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .results-summary h3 {
+            margin: 0;
+            color: var(--primary-color);
+        }
+        .results-summary p {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0.5rem 0 0 0;
+        }
+        .tax-breakdown {
+            margin-top: 1rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Free Online Tools by Yash Dhanjwal</a>
+            <nav>
+                <a href="about.html">About</a>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tool-container">
+                <h2>Income Tax Calculator (India)</h2>
+                <p>For FY 2024-25 (AY 2025-26)</p>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="tax-regime">Tax Regime</label>
+                        <select id="tax-regime">
+                            <option value="new">New Regime (Default)</option>
+                            <option value="old">Old Regime</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age-group">Your Age</label>
+                        <select id="age-group">
+                            <option value="below_60">Below 60 years</option>
+                            <option value="60_to_80">60 to 80 years</option>
+                            <option value="above_80">Above 80 years</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="gross-income">Gross Annual Income (₹)</label>
+                        <input type="number" id="gross-income" placeholder="e.g., 1200000">
+                    </div>
+                    <div class="form-group full-width" id="deductions-group">
+                        <label for="deductions">Total Deductions (₹)</label>
+                        <input type="number" id="deductions" placeholder="e.g., 150000">
+                    </div>
+                </div>
+
+                <div class="results-summary">
+                    <h3>Total Tax Payable</h3>
+                    <p>₹ <span id="total-tax">0.00</span></p>
+                    <div class="tax-breakdown">
+                        <p><strong>Taxable Income:</strong> ₹ <span id="taxable-income">0.00</span></p>
+                        <p><strong>Income Tax:</strong> ₹ <span id="income-tax">0.00</span></p>
+                        <p><strong>Surcharge:</strong> ₹ <span id="surcharge">0.00</span></p>
+                        <p><strong>Health & Edu Cess (4%):</strong> ₹ <span id="cess">0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <a href="https://www.yashdhanjwal.com" target="_blank">Yash Dhanjwal</a> | Powered by Hostingial.com</p>
+            <p>Contact: <a href="mailto:info@yashdhanjwal.com">info@yashdhanjwal.com</a> | New Delhi, India | +91 9990033043</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/income-tax-calculator.js"></script>
+</body>
+</html>
